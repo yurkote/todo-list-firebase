@@ -1,0 +1,17 @@
+@import '~bootstrap/scss/bootstrap.scss';
+.inp_placeholder {
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.note {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.pl_2{
+  padding-left: 1rem;
+}

@@ -10,6 +10,7 @@ let conf = {
   },
   devServer: {
     overlay: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
