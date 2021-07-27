@@ -3,3 +3,5 @@ dist
 _dist
 workspace.code-workspace
 sass
+.env
+.env.local

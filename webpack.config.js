@@ -1,5 +1,16 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
+const dotenv = require("dotenv");
+const webpack = require('webpack');
+
+// //call dotenv and it will return an Object with a parsed key 
+// const env = dotenv.config().parsed;
+
+// //reduce it to a nice object, the same as before
+// const envKeys = Object.keys(env).reduce((prev, next) => {
+// prev[`process.env.${next}`] = JSON.stringify(env[next]);
+// return prev;
+// }, {});
 
 let conf = {
   entry: "./src/index.js",
@@ -10,7 +21,7 @@ let conf = {
   },
   devServer: {
     overlay: true,
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -44,7 +55,7 @@ let conf = {
             options: {
               importLoaders: 1,
               modules: {
-                mode: 'local',
+                mode: "local",
                 localIdentName: "[local]__[sha1:hash:hex:7]",
               },
             },
@@ -58,6 +69,10 @@ let conf = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(dotenv.config().parsed)
+    })
+    // new webpack.DefinePlugin(envKeys)
   ],
   optimization: {
     splitChunks: {
@@ -81,6 +96,8 @@ let conf = {
 };
 
 module.exports = (env, options) => {
+
+
   let isProd = options.mode === "production";
 
   conf.devtool = isProd ? false : "eval-cheap-module-source-map";
