@@ -17,9 +17,7 @@ const AlertState = ({ children }) => {
 
   useEffect(() => {
     const hideAlert = setTimeout(() => {
-      if (state.type === "success") {
-        hide();
-      }
+      hide();
     }, 1250);
     return () => clearTimeout(hideAlert);
   }, [state.visible]);

@@ -15,7 +15,7 @@ const handlers = {
     ...state,
     notes: state.notes.filter((note) => note.id !== payload),
   }),
-  DEFAULT: (state) => state,
+  DEFAULT: (state) => state
 };
 
 export const firebaseReducer = (state, action) => {
