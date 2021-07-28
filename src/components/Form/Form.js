@@ -16,7 +16,6 @@ export const Form = () => {
       }).catch(() => {
         alert.show('Something went wrong, please try again', 'danger')
       });
-      alert.show("Todo is added", "success");
       setValue("");
     } else {
       alert.show("Set what to do")
