@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import AlertContext from "../context/alert/alertContext";
-import { FirebaseContext } from "../context/firebase/firebaseContext";
+import FirebaseContext from "../context/firebase/firebaseContext";
 
-export const Form = () => {
+const Form = () => {
   const [value, setValue] = useState("");
   const alert = useContext(AlertContext);
   const firebase = useContext(FirebaseContext);
@@ -39,3 +39,5 @@ export const Form = () => {
     </form>
   );
 };
+
+export default Form;

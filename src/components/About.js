@@ -1,6 +1,6 @@
 import React from "react";
 
-export const About = () => (
+const About = () => (
   <div className="p-5 mb-4 bg-light rounded-3">
     <div className="container-fluid py-5">
       <h1 className="display-5">React ToDo list with firebase</h1>
@@ -15,3 +15,5 @@ export const About = () => (
     </div>
   </div>
 );
+
+export default About;

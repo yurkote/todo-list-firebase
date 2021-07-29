@@ -15,10 +15,12 @@ const handlers = {
     ...state,
     notes: state.notes.filter((note) => note.id !== payload),
   }),
-  DEFAULT: (state) => state
+  DEFAULT: (state) => state,
 };
 
-export const firebaseReducer = (state, action) => {
+const firebaseReducer = (state, action) => {
   const handle = handlers[action.type] || handlers.DEFAULT;
   return handle(state, action);
 };
+
+export default firebaseReducer;

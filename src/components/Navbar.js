@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "../app.module.scss";
-
 import { NavLink } from "react-router-dom";
 
-export const Navbar = () => (
+const Navbar = () => (
   <nav
     className={`navbar navbar-dark navbar-expand bg-primary justify-content-between ${styles.pl_2}`}
   >
@@ -24,3 +23,5 @@ export const Navbar = () => (
     </ul>
   </nav>
 );
+
+export default Navbar;

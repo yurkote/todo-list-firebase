@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import { FirebaseContext } from "../context/firebase/firebaseContext";
-import { Form } from "./Form";
+import FirebaseContext from "../context/firebase/firebaseContext";
+import Form from "./Form";
 import Notes from "./Notes";
 import Loader from "./Loader";
 
-export const Home = () => {
+const Home = () => {
   
   // imitate array notes without firebase
   // const notes = new Array(3)
@@ -27,3 +27,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;
