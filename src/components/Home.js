@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { FirebaseContext } from "../context/firebase/firebaseContext";
-import { Form } from "./Form/Form";
-import Notes from "./Notes/Notes";
-import Loader from "./Loader/Loader";
+import { Form } from "./Form";
+import Notes from "./Notes";
+import Loader from "./Loader";
 
 export const Home = () => {
+  
+  // imitate array notes without firebase
   // const notes = new Array(3)
   //   .fill("")
   //   .map((_, i) => ({ id: i, title: `Note ${i + 1}` }));

@@ -5,9 +5,13 @@ export const About = () => (
     <div className="container-fluid py-5">
       <h1 className="display-5">React ToDo list with firebase</h1>
       <p className="col-md-8 fs-4">Version 1.0.18</p>
-      <button className="btn btn-primary btn-lg" type="button">
-        <a href=""> Go to GitHub</a>
-      </button>
+      <a
+        href="https://github.com/yurkote/todo-list-firebase"
+        target="_blank"
+        className="btn btn-primary btn-lg"
+      >
+        Go to GitHub
+      </a>
     </div>
   </div>
 );
